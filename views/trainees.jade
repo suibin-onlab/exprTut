@@ -1,0 +1,33 @@
+extends layout
+block content
+  thead
+    tr
+        th Id
+        th First Name
+        th Last Name
+        th Club
+        th Weight
+        th Height
+        th DashTime
+        th Last Updated
+        th Note
+        th Action
+  tbody
+    each item in pageData
+      tr
+          td #{item.id}
+          td #{item.FirstName}
+          td #{item.LastName}
+          td #{item.Club}
+          td #{item.Weight}
+          td #{item.Height}
+          td #{item.DashTime}
+          td #{item.LastUpdated}
+          td #{item.Note}
+          td
+            form(method='delete')
+              label(for='name')
+              select(name="action" onChange = "alert(value)")
+                option(value="") -- Select an Action --
+                option(value="Delete") Delete
+                option(value="Modify") Modify

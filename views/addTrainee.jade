@@ -1,0 +1,43 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Sign Up
+
+        // Add Trainee Form
+        form(method='POST' action = 'addTrainee')
+          div.form-group
+            label(for='name') First Name:
+            input#fName.form-control(type='text', placeholder='First Name' name='FirstName')
+          div.form-group
+              label(for='name') Last Name:
+              input#fName.form-control(type='text', placeholder='Last Name' name='LastName')
+          div.form-group
+              label(for='name') Club:
+              select(name="Club")
+                option(value="") -- Select a Club --
+                option(value="AAA") AAA
+                option(value="BBB") BBB
+                option(value="CCC") CCC
+                option(value="DDD") DDD
+                option(value="EEE") EEE
+                option(value="FFF") FFF
+          div.form-group
+              label(for='name') Weight:
+              input#fName.form-control(type='number', placeholder='# in lbs' name='Weight')
+          div.form-group
+              label(for='name') Height:
+              input#fName.form-control(type='number', placeholder='# in inches' name='Height')
+          div.form-group
+              label(for='name') DashTime:
+              input#fName.form-control(type='text', placeholder='# in seconds' name='DashTime')
+          div.form-group
+              label(for='name') Note:
+              input#fName.form-control(type='text', placeholder='Any Text' name='Note')
+
+          button.btn.btn-primary(type='submit') Add Trainee & Data
